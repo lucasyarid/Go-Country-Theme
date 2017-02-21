@@ -1,0 +1,46 @@
+.home {
+	.banner-content {
+		.box-slider, .banner-content-title {
+			width: 50%;
+			float: left;
+		}
+		.box-slider {
+			ul {
+				border: 1px solid #fff;
+				padding: 30px;
+				color: #FFF;
+				margin: 0;
+				width: 475px;
+			}
+			.box-slider-title {
+				font-size: 30px;
+			}
+			.box-slider-description {
+				font-size: 18px;
+			}
+			p {
+				font-size: 16px;
+				padding: 10px 0;
+			}
+			button {
+				width: 125px;
+				height: 50px;
+				background-color: #FFF;
+				color: #C62042;
+				font-size: 16px;
+				border: none;
+				-webkit-border-radius: 0;
+				        border-radius: 0;
+			}
+		}
+		.banner-content-title {
+			font-size: 44px;
+			color: #FFF;
+			text-align: right;
+			padding-top: 60px;
+			b {
+				text-transform: uppercase;
+			}
+		}
+	}
+}

@@ -20,26 +20,20 @@ get_header(); ?>
 			<div class="header-cover">
 				<article class="banner-content container">
 					<section>
-						<div class="box-slider">
-							<ul>
-								<li>
-									<div class="box-slider-title">Go To Whisky</div>
-									<div class="box-slider-description">Private Tour de 1 dia</div>
-									<p>
-										Um passeio para beber e não esquecer:
-										Três destilarias, em meio às belas paisagens de Pertshire, nas Terras Altas da Escócia
-									</p>
-									<button>Saiba Mais</button>
-								</li>
-							</ul>
+						<div class="banner-form">
+							<h2>Solicite um Orçamento</h2>
+							<?php echo do_shortcode('[gravityform id=1 title=false]'); ?>
 						</div>
 						<div class="banner-content-title">
 							<b>go SCOTLAND:</b> descubra
 							os <b>melhores</b> lugares
 							da <b>ESCÓCIA!</b>
-						</div>
+						</div>						
 					</section>
 				</article>
+				<div id="scroll-bottom" class="scroll-bottom">
+					<img src="/~gots/wp-content/uploads/scroll.png" alt="Scroll Bottom">
+				</div>
 			</div>
 
 			<?php

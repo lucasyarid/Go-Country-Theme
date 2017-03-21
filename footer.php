@@ -13,12 +13,48 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'co-country-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'co-country-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'co-country-theme' ), 'co-country-theme', '<a href="https://automattic.com/" rel="designer">bs.agency</a>' ); ?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer" role="contentinfo">		
+		<div class="footer-top">
+			<div class="container">
+				<ul>
+					<?php
+						$x = 1;
+						while( $x <= 4) {
+							?>
+							<li class="footer-item">
+								<?php dynamic_sidebar( 'footer-'.$x ); ?>
+							</li>						
+							<?php
+							$x++;
+						}				
+					?>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="footer-bottom-links">
+					<div class="footer-bottom-menu">
+						<?php wp_nav_menu( array( 'theme_location' => 'menu-2', 'menu_id' => 'footer-menu' ) ); ?>
+					</div>
+					<div class="footer-bottom-signature">
+						Desenvolvido por <b>DipDesign</b>
+					</div>
+				</div>
+				<div class="footer-bottom-cards">
+					<div class="footer-bottom-cards-container">
+						<img src="/~gots/wp-content/uploads/visa-electron.png" alt="Visa Electron">
+						<img src="/~gots/wp-content/uploads/visa.png" alt="Visa">
+						<img src="/~gots/wp-content/uploads/paypal.png" alt="Paypal">
+						<img src="/~gots/wp-content/uploads/mastercard.png" alt="Mastercard">
+						<img src="/~gots/wp-content/uploads/amex.png" alt="Amex">
+						<img src="/~gots/wp-content/uploads/delta.png" alt="Delta">
+						<img src="/~gots/wp-content/uploads/maestro.png" alt="Maestro">
+						<img src="/~gots/wp-content/uploads/wu.png" alt="Western Union">
+					</div>
+				</div>
+			</div>				
+		</div>	
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -3,6 +3,7 @@
 	height: 85px;
 	width: 100%;
 	position: absolute;
+	z-index: 10;
 }
 
 .header-cover {
@@ -16,4 +17,3 @@
 		background-image: url("/~gots/wp-content/uploads/index.jpg");
 	}
 }
-

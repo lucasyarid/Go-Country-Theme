@@ -49,13 +49,13 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'co-country-theme' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+				<a href="#" id="menu-icon" aria-controls="primary-menu" aria-expanded="false"></a>
 				<div class="search-container">
 					<a href="">
 						<img src="/~gots/wp-content/uploads/search.png" alt="search">
 					</a>
 				</div>
+				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->

@@ -46,6 +46,9 @@ function co_country_theme_setup() {
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'co-country-theme' ),
 	) );
+	register_nav_menus( array(
+		'menu-2' => esc_html__( 'Footer', 'co-country-theme' ),
+	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -98,6 +101,23 @@ function co_country_theme_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	// Register each footer widget
+	$x = 1;
+	while( $x <= 4) {
+		$footerName = 'Footer '.$x;
+		$footerID = 'footer-'.$x;
+	    register_sidebar( array(
+	    	'name'          => esc_html__( $footerName, 'co-country-theme' ),
+	    	'id'            => $footerID,
+	    	'description'   => esc_html__( 'Add widgets here.', 'co-country-theme' ),
+	    	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	    	'after_widget'  => '</section>',
+	    	'before_title'  => '<h2 class="widget-title">',
+	    	'after_title'   => '</h2>',
+	    ) );
+	    $x++;
+	} 	
 }
 add_action( 'widgets_init', 'co_country_theme_widgets_init' );
 
@@ -116,6 +136,14 @@ function co_country_theme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'co_country_theme_scripts' );
+
+/**
+ * Enqueue google fonts.
+ */
+function wpb_add_google_fonts() {
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:300,500,700', false );
+}
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
 /**
  * Implement the Custom Header feature.

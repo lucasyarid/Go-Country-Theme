@@ -169,3 +169,125 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+
+if ( ! function_exists( 'passeios_turisticos_vantagens' ) ) {
+
+/**
+ * Register CT - Passeios Turisticos - Vantagens
+ */
+function passeios_turisticos_vantagens() {
+
+	$labels = array(
+		'name'                       => _x( 'Vantagens', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Vantagem', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Vantagens', 'text_domain' ),
+		'all_items'                  => __( 'Todas', 'text_domain' ),
+		'new_item_name'              => __( 'Nova vantagem', 'text_domain' ),
+		'add_new_item'               => __( 'Adicionar vantagem', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover vantagens', 'text_domain' ),
+		'search_items'               => __( 'Pesquisar vantagens', 'text_domain' ),
+		'not_found'                  => __( 'Nenhuma vantagem encontrada', 'text_domain' ),
+		'no_terms'                   => __( 'Nenhuma vantagem', 'text_domain' ),
+		'items_list'                 => __( 'Lista de vantagens', 'text_domain' ),
+		'items_list_navigation'      => __( 'Navegação lista de vantagens', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'passeios_turisticos_vantagens', array( 'passeios_turisticos' ), $args );
+
+}
+add_action( 'init', 'passeios_turisticos_vantagens', 0 );
+
+}
+
+
+if ( ! function_exists('passeios_turisticos') ) {
+
+/**
+ * Register CPT - Passeios Turisticos
+ */
+function passeios_turisticos() {
+
+	$labels = array(
+		'name'                  => _x( 'Passeios Turísticos', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Passeio Turístico', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Passeios Turísticos', 'text_domain' ),
+		'name_admin_bar'        => __( 'Passeios Turísticos', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Passeio Turístico', 'text_domain' ),
+		'description'           => __( 'Registrar novos passeios', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', ),
+		'taxonomies'            => array( 'category' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-palmtree',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'passeios_turisticos', $args );
+
+}
+add_action( 'init', 'passeios_turisticos', 0 );
+
+}
+
+
+if ( ! function_exists('suporte') ) {
+/**
+ * Register CPT - Suporte
+ */
+function suporte() {
+
+	$labels = array(
+		'name'                  => _x( 'Suporte', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Suporte', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Suporte', 'text_domain' ),
+		'name_admin_bar'        => __( 'Suporte', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Suporte', 'text_domain' ),
+		'description'           => __( 'Registrar faqs etc', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', ),
+		'taxonomies'            => array( 'category' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-editor-help',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'suporte', $args );
+
+}
+add_action( 'init', 'suporte', 0 );
+
+}

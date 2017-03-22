@@ -17,7 +17,7 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
-			<div class="header-cover">
+			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/index.jpg');">
 				<article class="banner-content container">
 					<section>
 						<div class="banner-form">

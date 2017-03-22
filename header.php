@@ -26,20 +26,20 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding">
-				<?php
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title">
-					<?php $header_image = get_header_image();
-						if ( ! empty( $header_image ) ) { ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-								<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>" />
-							</a>
-						<?php } // if ( ! empty( $header_image ) ) ?>
+				<?php if ( is_front_page() && is_home() ) { ?>
+					<h1>
+				<?php } ?>
+					<span class="site-title">
+						<?php $header_image = get_header_image();
+							if ( ! empty( $header_image ) ) { ?>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+									<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>" />
+								</a>
+						<?php } ?>
+					</span>
+				<?php if ( is_front_page() && is_home() ) { ?>
 					</h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
+				<?php }
 
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>

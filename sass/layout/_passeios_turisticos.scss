@@ -1,0 +1,271 @@
+@media (min-width: $size__breakpoint-small) {
+	.passeios-turisticos-page {
+		.passeios-turisticos-title {
+			h1, h2 {
+				color: #FFF;
+				text-align: center; 
+				margin: 0;
+			}
+			h1 {
+				text-transform: uppercase;
+			}
+			h2 {
+				font-weight: 100;
+			}
+		}
+		.line-fix-container {
+			display: none;
+		}		
+		.passeios-turisticos-main {
+			width: 100%;
+			float: left;
+			.passeios-turisticos-topBar {
+				&:after {
+					content: ""; 
+					clear: both;
+					display: block;
+				}
+				.topBarItem {
+					width: 100%;
+					float: left; 					
+					.topBarItem-img {
+						float: left;
+						img {
+							padding: 20px;
+						}
+					}
+					.topBarItem-content {
+						float: left;
+						.topBarItem-content-title {
+							margin-top: 20px;
+							font-size: 16px;
+							font-weight: 400; 
+							color: #444; 
+						}
+						.topBarItem-content-description {
+							font-size: 20px;
+							font-weight: 400; 
+							color: $color__site-main;
+							.priceEmpty {
+								color: #999;
+							}
+						}
+					}
+				}
+			}
+		}
+		.passeios-turisticos-sidebar {
+			width: 100%;
+			float: left;
+			margin-bottom: 20px;
+			.passeios-turisticos-form {
+				.passeios-turisticos-form-box {
+					height: 92px;
+					overflow: hidden;
+					border-top: 1px solid #999;
+					border-left: 1px solid #999;
+					border-right: 1px solid #999;
+					.passeios-turisticos-form-img {
+						float: left;
+						img {
+							padding: 20px;
+						}
+					}
+					.passeios-turisticos-form-content {
+						float: left;
+						.passeios-turisticos-form-title {
+							margin-top: 20px;
+							font-size: 16px;
+							font-weight: 400; 
+							color: #444; 
+							b {
+								display: block;
+								font-size: 24px;
+								color: $color__site-secondary; 
+							}
+						}
+					}
+				}	
+				.passeios-turisticos-form-gravity {
+					border: 1px solid #999;
+					padding: 20px; 
+					.passeios-turisticos-form-description {
+						font-size: 14px;
+						font-weight: 400; 
+						color: #999;
+						clear: both;
+						margin-bottom: 10px;
+					}
+					.gform_wrapper {
+						ul {
+							margin: 0;
+							padding: 0;
+							.gfield_label {
+								font-weight: 400;
+								font-size: 13px;
+								margin-bottom: 10px;
+							}
+							input {
+								width: 100%;
+								border-radius: 0;
+								margin-bottom: 10px;
+								& ~ label {
+									display: none;
+								}
+							}							
+						}
+						.gform_button {
+							width: 100%;
+							color: #FFF;
+							text-transform: uppercase; 
+							border-radius: 0px;
+							border: 0px;
+							font-weight: 400;
+							font-size: 16px;
+							padding: 15px 30px;
+							margin-top: 20px;    
+						}
+					}
+				}				
+			}
+		}
+		.passeios-turisticos-content {
+			margin: 20px 0;
+			padding-right: 20px;
+			color: #999;
+			h3, h4 {
+				color: $color__site-main; 
+			}
+			h3 {
+				font-size: 30px;
+				margin-bottom: 20px;
+				font-weight: 400;
+				text-transform: uppercase; 
+			}
+			h4 {
+				font-size: 24px;
+				margin: 15px 0;
+				font-weight: 100;  
+			}
+		}
+		.passeios-turisticos-advantages {
+			background-color: #ededed; 
+			padding: 60px 0;
+			.passeios-turisticos-advantages-title {
+				text-transform: uppercase;
+				color: $color__site-main;
+				font-weight: 400;
+				font-size: 30px;
+				margin-bottom: 20px; 
+			}
+			.row {
+				clear: both;
+			}
+			.passeios-turisticos-advantages-item {
+				width: 100%;
+				float: left;
+				margin-bottom: 20px;
+				.passeios-turisticos-advantages-icon,
+				.passeios-turisticos-advantages-text {
+					float: left;				
+				}
+				.passeios-turisticos-advantages-icon {
+					padding-right: 20px;
+				}
+				.passeios-turisticos-advantages-text {
+					width: 70%;
+					padding-right: 20px;
+					margin-top: 2px;
+					h4 {
+						margin: 0;
+					}				
+					&:after {
+						content: ""; 
+						clear: both;
+						display: block;
+					}
+				}	
+			}			
+		}
+	}
+}
+
+@media (min-width: $size__breakpoint-medium) {
+	.passeios-turisticos-page {
+		.passeios-turisticos-main {
+			.passeios-turisticos-topBar {
+				.topBarItem {
+					width: 33.33%;
+					border-bottom: 1px solid #999;
+					border-left: 1px solid #999;
+					&:first-child {
+						border-left: 0; 
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $size__breakpoint-large) {
+	.passeios-turisticos-page {
+		.passeios-turisticos-title {
+			h1 {
+				font-size: 44px; 
+			}
+			h2 {
+				font-size: 30px; 
+			}
+		}
+		.line-fix-container {
+			position: relative;
+			display: block;
+			.line-fix {
+				position: absolute;
+				bottom: -92px;
+				width: 100%;
+				display: block;
+				border-bottom: 1px solid #999;
+			}
+		}
+		.passeios-turisticos-main {
+			width: 75%;
+			.passeios-turisticos-topBar {
+				height: 92px;
+				overflow: hidden;
+				.topBarItem {
+					border-bottom: 0;
+					&:first-child {
+						border-left: 1px solid #999; 
+					}
+				}
+			}
+		}
+		.passeios-turisticos-sidebar {
+			width: 25%;
+			.passeios-turisticos-form {
+				.passeios-turisticos-form-box {
+					border-top: 0px;
+				}
+				.passeios-turisticos-form-gravity {
+					border-top: 0px;
+				}
+			}
+		}
+		.passeios-turisticos-advantages {
+			.container {
+				padding-right: 330px;
+			}
+			.passeios-turisticos-advantages-item {
+				width: 50%;
+				.passeios-turisticos-advantages-text {
+					width: 80%;
+				}	
+			}			
+		}
+	}
+}
+
+@media (min-width: $size__breakpoint-xlarge) {
+	
+}

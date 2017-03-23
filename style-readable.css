@@ -1157,117 +1157,133 @@ a:hover, a:active {
 ## Passeios Turisticos
 --------------------------------------------------------------*/
 @media (min-width: 320px) {
-  .passeios-turisticos-page .passeios-turisticos-title h1, .passeios-turisticos-page .passeios-turisticos-title h2 {
+  .passeios-turisticos-single .passeios-turisticos-title h1, .passeios-turisticos-single .passeios-turisticos-title h2,
+  .passeios-turisticos-archive .passeios-turisticos-title h1,
+  .passeios-turisticos-archive .passeios-turisticos-title h2 {
     color: #FFF;
     text-align: center;
     margin: 0;
   }
-  .passeios-turisticos-page .passeios-turisticos-title h1 {
+  .passeios-turisticos-single .passeios-turisticos-title h1,
+  .passeios-turisticos-archive .passeios-turisticos-title h1 {
     text-transform: uppercase;
   }
-  .passeios-turisticos-page .passeios-turisticos-title h2 {
+  .passeios-turisticos-single .passeios-turisticos-title h2,
+  .passeios-turisticos-archive .passeios-turisticos-title h2 {
     font-weight: 100;
   }
-  .passeios-turisticos-page .line-fix-container {
+
+  .passeios-turisticos-single .scrollFixedOn {
+    position: fixed !important;
+    top: 10px;
+    background-color: #FFF;
+  }
+  .passeios-turisticos-single .scrollFixedOn .container {
+    position: relative;
+  }
+  .passeios-turisticos-single .scrollFixedOn.passeios-turisticos-sidebar {
+    right: 0;
+  }
+  .passeios-turisticos-single .line-fix-container {
     display: none;
   }
-  .passeios-turisticos-page .passeios-turisticos-main {
+  .passeios-turisticos-single .passeios-turisticos-main {
     width: 100%;
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar:after {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar:after {
     content: "";
     clear: both;
     display: block;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
     width: 100%;
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-img {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-img {
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-img img {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-img img {
     padding: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content {
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-title {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-title {
     margin-top: 20px;
     font-size: 16px;
     font-weight: 400;
     color: #444;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-description {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-description {
     font-size: 20px;
     font-weight: 400;
     color: #415ea5;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-description .priceEmpty {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem .topBarItem-content .topBarItem-content-description .priceEmpty {
     color: #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar {
+  .passeios-turisticos-single .passeios-turisticos-sidebar {
     width: 100%;
     float: left;
     margin-bottom: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box {
     height: 92px;
     overflow: hidden;
     border-top: 1px solid #999;
     border-left: 1px solid #999;
     border-right: 1px solid #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-img {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-img {
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-img img {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-img img {
     padding: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content {
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content .passeios-turisticos-form-title {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content .passeios-turisticos-form-title {
     margin-top: 20px;
     font-size: 16px;
     font-weight: 400;
     color: #444;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content .passeios-turisticos-form-title b {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box .passeios-turisticos-form-content .passeios-turisticos-form-title b {
     display: block;
     font-size: 24px;
     color: #c52244;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity {
     border: 1px solid #999;
     padding: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .passeios-turisticos-form-description {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .passeios-turisticos-form-description {
     font-size: 14px;
     font-weight: 400;
     color: #999;
     clear: both;
     margin-bottom: 10px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul {
     margin: 0;
     padding: 0;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul .gfield_label {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul .gfield_label {
     font-weight: 400;
     font-size: 13px;
     margin-bottom: 10px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul input {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul input {
     width: 100%;
     border-radius: 0;
     margin-bottom: 10px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul input ~ label {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper ul input ~ label {
     display: none;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper .gform_button {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity .gform_wrapper .gform_button {
     width: 100%;
     color: #FFF;
     text-transform: uppercase;
@@ -1278,123 +1294,230 @@ a:hover, a:active {
     padding: 15px 30px;
     margin-top: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-content {
+  .passeios-turisticos-single .passeios-turisticos-content {
     margin: 20px 0;
     padding-right: 20px;
     color: #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-content h3, .passeios-turisticos-page .passeios-turisticos-content h4 {
+  .passeios-turisticos-single .passeios-turisticos-content h3, .passeios-turisticos-single .passeios-turisticos-content h4 {
     color: #415ea5;
   }
-  .passeios-turisticos-page .passeios-turisticos-content h3 {
+  .passeios-turisticos-single .passeios-turisticos-content h3 {
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: 400;
     text-transform: uppercase;
   }
-  .passeios-turisticos-page .passeios-turisticos-content h4 {
+  .passeios-turisticos-single .passeios-turisticos-content h4 {
     font-size: 24px;
     margin: 15px 0;
     font-weight: 100;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages {
+  .passeios-turisticos-single .passeios-turisticos-advantages {
     background-color: #ededed;
     padding: 60px 0;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-title {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-title {
     text-transform: uppercase;
     color: #415ea5;
     font-weight: 400;
     font-size: 30px;
     margin-bottom: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .row {
+  .passeios-turisticos-single .passeios-turisticos-advantages .row {
     clear: both;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item {
     width: 100%;
     float: left;
     margin-bottom: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-icon,
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-icon,
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
     float: left;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-icon {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-icon {
     padding-right: 20px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
     width: 70%;
     padding-right: 20px;
     margin-top: 2px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text h4 {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text h4 {
     margin: 0;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text:after {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text:after {
     content: "";
     clear: both;
     display: block;
   }
+
+  .passeios-turisticos-archive .header-cover {
+    margin-bottom: 20px;
+  }
+  .passeios-turisticos-archive .row {
+    clear: both;
+  }
+  .passeios-turisticos-archive .row:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos {
+    height: 300px;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container {
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin: 0;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container:hover .entry-header {
+    height: 100%;
+    padding-top: 220px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container:hover .entry-header .passeios-turisticos-button {
+    padding-top: 9px;
+    background-color: #c52244;
+    border: 0;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header {
+    width: 100%;
+    height: 95px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    transition: all .3s;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-text {
+    width: 65%;
+    padding-right: 10px;
+    float: left;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-text h2, .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-text h3 {
+    font-size: 14px;
+    line-height: 1.3em;
+    color: #FFF;
+    font-weight: 100;
+    margin: 0;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-button {
+    width: 35%;
+    max-width: 140px;
+    height: 45px;
+    border: 1px solid #FFF;
+    float: right;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 8px;
+    margin-top: 10px;
+    transition: background-color .3s;
+  }
 }
 @media (min-width: 770px) {
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
     width: 33.33%;
     border-bottom: 1px solid #999;
     border-left: 1px solid #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem:first-child {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem:first-child {
     border-left: 0;
+  }
+
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-text h2, .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header .passeios-turisticos-text h3 {
+    font-size: 18px;
   }
 }
 @media (min-width: 960px) {
-  .passeios-turisticos-page .passeios-turisticos-title h1 {
+  .passeios-turisticos-single .passeios-turisticos-title h1 {
     font-size: 44px;
   }
-  .passeios-turisticos-page .passeios-turisticos-title h2 {
+  .passeios-turisticos-single .passeios-turisticos-title h2 {
     font-size: 30px;
   }
-  .passeios-turisticos-page .line-fix-container {
+  .passeios-turisticos-single .line-fix-container {
     position: relative;
     display: block;
   }
-  .passeios-turisticos-page .line-fix-container .line-fix {
+  .passeios-turisticos-single .line-fix-container .line-fix {
     position: absolute;
     bottom: -92px;
     width: 100%;
     display: block;
     border-bottom: 1px solid #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-main {
+  .passeios-turisticos-single .passeios-turisticos-main {
     width: 75%;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar {
     height: 92px;
     overflow: hidden;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem {
     border-bottom: 0;
   }
-  .passeios-turisticos-page .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem:first-child {
+  .passeios-turisticos-single .passeios-turisticos-main .passeios-turisticos-topBar .topBarItem:first-child {
     border-left: 1px solid #999;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar {
+  .passeios-turisticos-single .passeios-turisticos-sidebar {
     width: 25%;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-box {
     border-top: 0px;
   }
-  .passeios-turisticos-page .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity {
+  .passeios-turisticos-single .passeios-turisticos-sidebar .passeios-turisticos-form .passeios-turisticos-form-gravity {
     border-top: 0px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .container {
+  .passeios-turisticos-single .passeios-turisticos-advantages .container {
     padding-right: 330px;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item {
     width: 50%;
   }
-  .passeios-turisticos-page .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
+  .passeios-turisticos-single .passeios-turisticos-advantages .passeios-turisticos-advantages-item .passeios-turisticos-advantages-text {
     width: 80%;
+  }
+
+  .passeios-turisticos-archive article.passeios_turisticos {
+    width: 33.33%;
+    margin-bottom: 15px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container {
+    margin: 0 5px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container-1 {
+    margin: 0 10px 0 0;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container-3 {
+    margin: 0 0 0 10px;
+  }
+}
+@media (min-width: 1169px) {
+  .passeios-turisticos-archive article.passeios_turisticos {
+    margin-bottom: 30px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container {
+    margin: 0 10px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container-1 {
+    margin: 0 20px 0 0;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container-3 {
+    margin: 0 0 0 20px;
+  }
+  .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header {
+    padding: 15px 30px;
   }
 }
 /*--------------------------------------------------------------

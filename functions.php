@@ -131,6 +131,12 @@ function co_country_theme_scripts() {
 
 	wp_enqueue_script( 'co-country-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'co-country-theme-jquery', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array( 'jquery' ), '3.2.0', true );
+
+	wp_enqueue_script( 'co-country-theme-functions', get_template_directory_uri() . '/js/functions.js', array(), '1.0.0', true );
+
+	add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

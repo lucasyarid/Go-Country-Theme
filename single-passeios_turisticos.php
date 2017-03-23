@@ -10,7 +10,7 @@
 	get_header();
 ?>
 
-<div class="wrapper passeios-turisticos-page">
+<div class="wrapper passeios-turisticos-single">
 	<div class="passeios-turisticos" id="content" tabindex="-1">
 
 		<?php while ( have_posts() ) : the_post(); ?>		
@@ -26,12 +26,12 @@
 					</h2>			
 				</section>
 			</article>
-		</div>	
+		</div>
 
-		<div class="line-fix-container"><div class="line-fix"></div></div>
+		<div class="line-fix-container scrollFixed"><div class="line-fix"></div></div>
 		<div class="container">
 			<div class="passeios-turisticos-main">
-				<div class="passeios-turisticos-topBar">
+				<div class="passeios-turisticos-topBar scrollFixed">
 					<?php if( get_field('duration') ): ?>
 						<div class="topBarItem passeios-turisticos-duration">
 							<div class="topBarItem-img">
@@ -89,7 +89,7 @@
 				</div>
 			</div>
 
-			<div class="passeios-turisticos-sidebar">
+			<div class="passeios-turisticos-sidebar scrollFixed">
 				<div class="passeios-turisticos-form">
 					<div class="passeios-turisticos-form-box">
 						<div class="passeios-turisticos-form-img">

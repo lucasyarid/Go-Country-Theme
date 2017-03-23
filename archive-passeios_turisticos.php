@@ -12,37 +12,60 @@
 ?>
 
 <div class="wrapper passeios-turisticos-archive" id="wrapper-index">
-	<div class="container" id="content" tabindex="-1">
+	<div id="content" tabindex="-1">
 		<div class="row passeios-turisticos">
 
+			<?php
+			if ( have_posts() ) : ?>
+
+				<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/passeios-turisticos.jpg');">
+					<article class="banner-content container">
+						<section class="passeios-turisticos-title">
+							<h1>Passeios Turísticos</h1>		
+						</section>
+					</article>
+				</div>
+
 				<?php
-				if ( have_posts() ) : ?>
+				$i = 0;
+				/* Start the Loop */
+				while ( have_posts() ) : the_post(); 
+					if ($i == 0) { ?>
+						<div class="row">
+				<?php } ?>
 
-					<?php
-					/* Start the Loop */
-					while ( have_posts() ) : the_post();
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<a href="<?php the_permalink(); ?>">
+							<div class="passeios-turisticos-container passeios-turisticos-container-<?php echo $i+1 ?>" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">							
+								<header class="entry-header">
+									<div class="passeios-turisticos-text">
+										<h2><?php the_title(); ?></h2>
+										<h3><?php the_field('description'); ?></h3>
+									</div>
+									<div class="passeios-turisticos-button">Consultar</div>
+								</header><!-- .entry-header -->
+							</div>
+						</a>			
+					</article><!-- #post-## -->
 
+				<?php if ($i == 2) { ?>
+					</div>
+				<?php
+					$i = -1;
+				}	
+				$i++;
+				endwhile;
 
-					endwhile;
+				the_posts_navigation();
 
-					the_posts_navigation();
+			else :
 
-				else :
+				get_template_part( 'template-parts/content', 'none' );
 
-					echo "<h2>Nenhum passeio encontrado.</h2>"
-
-				endif; ?>
+			endif; ?>
 
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-
-var images = ['fundo09-PB.jpg'];
-
-jQuery('#wrapper-index').css({'background-image': 'url(/wp-content/uploads/Exhibitions-background/' + images[Math.floor(Math.random() * images.length)] + ')'});
-
-</script>
 
 <?php get_footer(); ?>

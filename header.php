@@ -23,6 +23,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'co-country-theme' ); ?></a>
 
+	
+	<?php get_search_form(); ?>
+
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<div class="site-branding">
@@ -51,7 +54,7 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<a href="#" id="menu-icon" aria-controls="primary-menu" aria-expanded="false"></a>
 				<div class="search-container">
-					<a href="">
+					<a id="openSearch">
 						<img src="/~gots/wp-content/uploads/search.png" alt="search">
 					</a>
 				</div>

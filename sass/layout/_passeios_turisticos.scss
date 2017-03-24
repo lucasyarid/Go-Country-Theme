@@ -214,6 +214,12 @@
 				display: block;
 			}
 		}
+		.search-title {
+			color: $color__site-main;
+			text-transform: uppercase;
+			font-size: 30px;
+			margin: 40px 0 60px 0;  
+		}
 		article.passeios_turisticos {
 			height: 300px;
 			width: 100%;

@@ -297,3 +297,46 @@ function suporte() {
 add_action( 'init', 'suporte', 0 );
 
 }
+
+
+/**
+ * Search to Passeios Turísticos
+ */
+function tax_search_join($join) {
+	global $wpdb;
+	if(is_search()) {
+		$join .= "
+		INNER JOIN
+		{$wpdb->term_relationships} ON {$wpdb->posts}.ID = {$wpdb->term_relationships}.object_id
+		INNER JOIN
+		{$wpdb->term_taxonomy} ON {$wpdb->term_taxonomy}.term_taxonomy_id = {$wpdb->term_relationships}.term_taxonomy_id
+		INNER JOIN
+		{$wpdb->terms} ON {$wpdb->terms}.term_id = {$wpdb->term_taxonomy}.term_id
+		";
+	}
+	return $join;
+}
+add_filter('posts_join', 'tax_search_join');
+
+function tax_search_where($where) {
+	global $wpdb;
+	if(is_search()) {
+		$where .= " OR
+		(
+		{$wpdb->term_taxonomy}.taxonomy LIKE 'passeios_turisticos'
+		AND
+		{$wpdb->terms}.name LIKE ('%".$wpdb->escape( get_query_var('s') )."%')
+		) ";
+	}
+	return $where;
+}
+add_filter('posts_where', 'tax_search_where');
+
+function tax_search_groupby($groupby) {
+	global $wpdb;
+	if(is_search()) {
+		$groupby = "{$wpdb->posts}.ID";
+	}
+	return $groupby;
+}
+add_filter('posts_groupby', 'tax_search_groupby');

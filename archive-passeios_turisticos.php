@@ -15,16 +15,15 @@
 	<div id="content" tabindex="-1">
 		<div class="row passeios-turisticos">
 
+			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/passeios-turisticos.jpg');">
+				<article class="banner-content container">
+					<section class="passeios-turisticos-title">
+						<h1>Passeios Turísticos</h1>		
+					</section>
+				</article>
+			</div>
 			<?php
 			if ( have_posts() ) : ?>
-
-				<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/passeios-turisticos.jpg');">
-					<article class="banner-content container">
-						<section class="passeios-turisticos-title">
-							<h1>Passeios Turísticos</h1>		
-						</section>
-					</article>
-				</div>
 
 				<?php
 				$i = 0;

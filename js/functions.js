@@ -20,9 +20,18 @@ function detectWindowSize() {
 }
 detectWindowSize();
 
-$(window).resize(function() {
-	detectWindowSize();
-});
+function searchModal() {
+	$('#openSearch').click(function() {
+		$('#search-modal').fadeIn('200');
+		$('.search-modal-input input').focus();
+	});
+	$('#search-modal, #search-modal-close').click(function() {
+		$('#search-modal').fadeOut('200');
+	}).children().on('click', function (event) {
+    	event.stopPropagation();
+	});
+}
+searchModal();
 
 function fixDiv() {
 	var $fixedDivs = $('.scrollFixed');
@@ -33,6 +42,10 @@ function fixDiv() {
 		$fixedDivs.removeClass('scrollFixedOn');
 	}
 }
+
+$(window).resize(function() {
+	detectWindowSize();
+});
 
 $(window).scroll(function() {
 	if (!isMobile) {

@@ -20,6 +20,20 @@
 		.search-container {
 			padding: 20px;
 			display: none;
+			a {
+				cursor: pointer;				
+				img {
+					-webkit-transition: background-color .2s; 
+					-moz-transition: background-color .2s; 
+					-ms-transition: background-color .2s; 
+					-o-transition: background-color .2s; 
+					transition: background-color .2s;
+				    border-radius: 30px;
+				    &:hover {
+				    	background-color: $color__site-secondary; 
+				    }
+				}				
+			}
 		}
 		
 		ul {
@@ -44,7 +58,7 @@
 					&:hover > ul,
 					&.focus > ul {
 						left: 100%;
-					}
+					}					
 				}
 
 				a {
@@ -72,6 +86,10 @@
 			padding: 30px;
 			&:hover > a,
 			&.focus > a {
+			}
+			&.current-menu-item {
+				border-bottom: 6px solid #FFF;
+				padding-bottom: 24px;
 			}
 		}
 

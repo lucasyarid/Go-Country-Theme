@@ -10,8 +10,8 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nenhuma página encontrada', 'co-country-theme' ); ?></h1>
+	<header class="page-header container">
+		<h2 class="search-title"><?php esc_html_e( 'Nenhuma página encontrada', 'co-country-theme' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,16 +22,16 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'co-country-theme' ); ?></p>
-			<?php
-				get_search_form();
+			<div class="container">
+				<p><?php esc_html_e( 'Desculpe, não encontramos resultados em sua pesquisa.', 'co-country-theme' ); ?></p>
+			</div>
 
-		else : ?>
+		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'co-country-theme' ); ?></p>
-			<?php
-				get_search_form();
+			<div class="container">
+				<p><?php esc_html_e( 'Parece que não encontramos o que procura.' ); ?></p>
+			</div>
 
-		endif; ?>
+		<?php endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

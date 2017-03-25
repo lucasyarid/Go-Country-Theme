@@ -17,3 +17,25 @@ a {
 		outline: 0;
 	}
 }
+
+.navigation {
+	margin-bottom: 30px;
+	clear: both;
+	ol.wp-paginate  {
+		li {
+			span, a {
+				padding: 10px 15px;
+				border: 1px solid $color__site-main;
+				background-color: transparent;
+				color: $color__site-main;
+				font-size: 16px;
+				margin-right: 10px;
+				&.page.current {
+					color: #FFF;
+					border: 1px solid $color__site-secondary; 
+					background-color: $color__site-secondary; 
+				}
+			}
+		}
+	}
+}

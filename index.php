@@ -13,60 +13,80 @@
  */
 
 get_header(); ?>
-
 		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+			<main id="main" class="blog" role="main">
 
-			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/index.jpg');">
-				<article class="banner-content container">
-					<section>
-						<div class="banner-form">
-							<h2>Solicite um Orçamento</h2>
-							<?php echo do_shortcode('[gravityform id=1 title=false]'); ?>
-						</div>
-						<div class="banner-content-title">
-							<b>go SCOTLAND:</b> descubra
-							os <b>melhores</b> lugares
-							da <b>ESCÓCIA!</b>
-						</div>						
+			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/blog.jpg');">
+				<article class="container">
+					<section class="blog-title">
+						<h1>Blog</h1>
+						<h2>Novidades do Reino Unido</h2>			
 					</section>
 				</article>
-				<div id="scroll-bottom" class="scroll-bottom">
-					<img src="/~gots/wp-content/uploads/scroll.png" alt="Scroll Bottom">
-				</div>
 			</div>
 
-			<?php
-			if ( have_posts() ) :
+			<div class="blog-container container">
+				<div class="blog-sidebar">
+					<?php get_sidebar(); ?>
+				</div>
+				<div class="blog-posts">
+					<?php
+					if ( have_posts() ) : ?>
 
-				if ( is_home() && ! is_front_page() ) : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
+						<?php
+						$i = 0;
+						/* Start the Loop */
+						while ( have_posts() ) : the_post(); 
+							if ($i == 0) { ?>
+								<div class="row">
+						<?php } ?>
 
-				<?php
-				endif;
+							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+								<a href="<?php the_permalink(); ?>">
+									<div class="post-container">
+										<div class="post-date">
+											<div class="post-date-day"><?php echo get_the_date('d');?></div>
+											<div class="post-date-month"><?php echo get_the_date('M');?></div>
+										</div>
+										<div class="post-image" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
+										<div class="post-text">
+											<header class="entry-header">
+												<div class="post-title">
+													<h2><?php the_title(); ?></h2>
+													<h3><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h3>
+												</div>												
+											</header>
+											<div class="entry-excerpt">
+												<?php the_excerpt(); ?>
+											</div>
+											<a href="<?php the_permalink(); ?>"><div class="post-button">Saiba Mais</div></a>		
+										</div>
+									</div>
+								</a>			
+							</article><!-- #post-## -->
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+						<?php if ($i == 1) { ?>
+							</div>
+						<?php
+							$i = -1;
+						}	
+						$i++;
+						endwhile;
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+						if(function_exists('wp_paginate')):
+						    wp_paginate();  
+						else :
+							the_posts_navigation();
+						endif;
 
-				endwhile;
+					else :
 
-				the_posts_navigation();
+						get_template_part( 'template-parts/content', 'none' );
 
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-
+					endif; ?>
+				</div>
+			</div>
+			
 			</main><!-- #main -->
 		</div><!-- #primary -->
 

@@ -1,19 +1,9 @@
-<?php
-/**
- * Template Name: Passeios Turísticos
- * The template for the single page.
- *
- */
-?>
-
 <?php 
 	get_header();
 ?>
 
 <div class="wrapper passeios-turisticos-single">
 	<div class="passeios-turisticos" id="content" tabindex="-1">
-
-		<?php while ( have_posts() ) : the_post(); ?>		
 
 		<div class="header-cover" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>');">
 			<article class="banner-content container">
@@ -27,6 +17,8 @@
 				</section>
 			</article>
 		</div>
+		
+		<?php while ( have_posts() ) : the_post(); ?>		
 
 		<div class="line-fix-container scrollFixed"><div class="line-fix"></div></div>
 		<div class="container">
@@ -78,7 +70,7 @@
 					<?php the_content(); ?>
 					<?php $galleryID = get_field('unite-gallery-category-id');
 						if( $galleryID ): ?>
-							<div class="passeios-turisticos-gallery">
+							<div id="passeios-turisticos-gallery" class="passeios-turisticos-gallery">
 								<div class="col-sm-12">
 									<div>
 										<?php putUniteGallery('passeiosTuristicos', $galleryID ); ?>
@@ -99,7 +91,7 @@
 							<div class="passeios-turisticos-form-title">Solicite um <b>Orçamento</b></div>						
 						</div>
 					</div>
-					<div class="passeios-turisticos-form-gravity">
+					<div id="scrollStop" class="passeios-turisticos-form-gravity">
 						<div class="passeios-turisticos-form-description">
 							Preencha o formulário abaixo para solicitar um orçamento:
 						</div>

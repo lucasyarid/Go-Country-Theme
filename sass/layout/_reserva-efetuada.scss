@@ -1,0 +1,39 @@
+@media (min-width: $size__breakpoint-small) {
+	.reserva-efetuada {
+		.header-cover {	
+			height:100vh;
+			padding-top: 30vh; 
+		}
+		.reserva-efetuada-title {	
+			h1, h2 {
+				color: #FFF;
+				text-align: center;
+				margin: 0;
+				margin-bottom: 5px;
+			}
+			h1 {
+				font-size: 44px;
+				text-transform: uppercase;			
+			}
+			h2 {
+				font-size: 30px;
+				font-weight: 100; 
+			}
+		}
+		.reserva-efetuada-home {
+			width: 210px;
+			height: 45px;
+			margin: 30px auto; 
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			padding: 10px 20px; 
+			background-color: $color__site-secondary;
+			color: #FFF;
+			@include transition(background-color .2s);
+			&:hover {
+				background-color: $color__site-main;
+			}
+		}
+	}
+}

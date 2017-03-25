@@ -7,11 +7,12 @@
 		padding-left: 10px;
 		padding-right: 10px; 
 	}
-}
-
-@media (min-width: $size__breakpoint-large) {
-	.container {
-		padding-left: 0px;
-		padding-right: 0px;  
+	.container-large {
+		overflow: hidden;
+		max-width: 1400px;
+		margin: 0 auto;
+		clear: both;
+		padding-left: 10px;
+		padding-right: 10px; 
 	}
 }

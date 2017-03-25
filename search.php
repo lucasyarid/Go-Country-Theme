@@ -60,7 +60,11 @@ get_header(); ?>
 					$i++;
 					endwhile;
 
-					the_posts_navigation();
+					if(function_exists('wp_paginate')):
+					    wp_paginate();  
+					else :
+						the_posts_navigation();
+					endif;
 
 				else :
 

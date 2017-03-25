@@ -27,7 +27,17 @@
 	<?php get_search_form(); ?>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="container">
+		<div class="topBar">
+			<div class="container">
+				<div class="topBar-container">	
+					<img class="topBar-phone-img" src="/~gots/wp-content/uploads/topPhone.png" alt="Telefone">
+					<span class="topBar-phone-txt">+55 11 3958-4973  |  +44 78 0923-5633</span>
+					<img class="topBar-email-img" src="/~gots/wp-content/uploads/topEmail.png" alt="Email">
+					<span class="topBar-email-txt">contato@goescocia.com</span>
+				</div>					
+			</div>
+		</div>
+		<div class="container">			
 			<div class="site-branding">
 				<?php if ( is_front_page() && is_home() ) { ?>
 					<h1>

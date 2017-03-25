@@ -8,36 +8,31 @@
  */
 
 ?>
+<?php
+	$background_image;
+	if (has_post_thumbnail()) {
+		$background_image = get_the_post_thumbnail_url();
+	} else {
+		$background_image = '/~gots/wp-content/uploads/search-passeios-turisticos.jpg';
+	}
+?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<div class="wrapper page" id="wrapper-index">
+	<div id="content" tabindex="-1">
 
-	<div class="entry-content">
-		<?php
-			the_content();
+		<div class="header-cover" style="background-image: url('<?php echo $background_image ?>');">
+			<article class="banner-content container">
+				<section class="page-title">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>	
+				</section>
+			</article>
+		</div>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'co-country-theme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<div class="container">
+			<div class="page-main">
+				<?php the_content(); ?>	
+			</div>
+		</div>
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'co-country-theme' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-## -->
+	</div>
+</div>

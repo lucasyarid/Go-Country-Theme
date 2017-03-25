@@ -8,28 +8,51 @@
  */
 
 get_header(); ?>
+		<div id="primary" class="content-area">
+			<main id="main" class="blog post" role="main">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/blog.jpg');">
+				<article class="container">
+					<section class="blog-title">
+						<h1><?php the_title(); ?></h1>
+						<h2><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h2>			
+					</section>
+				</article>
+			</div>
 
-		<?php
-		while ( have_posts() ) : the_post();
+			<div class="blog-container container">
+				<div class="blog-sidebar">
+					<?php get_sidebar(); ?>
+				</div>
+				<?php
+				if ( have_posts() ) : ?>
 
-			get_template_part( 'template-parts/content', get_post_format() );
+						<article id="post-single-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<div class="post-single-container">
+								<div class="post-date">
+									<div class="post-date-full">
+										<?php echo get_the_date('d');?> de <?php echo get_the_date('F');?> de <?php echo get_the_date('y');?>
+									</div>
+								</div>
+								<div class="post-text">
+									<div class="entry-content">
+										<?php the_content(); ?>
+									</div>	
+								</div>
+							</div>	
+						</article><!-- #post-## -->
 
-			the_post_navigation();
+					<?php
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+				else :
 
-		endwhile; // End of the loop.
-		?>
+					get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				endif; ?>
+			</div>
+			
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

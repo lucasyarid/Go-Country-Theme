@@ -12,13 +12,20 @@ if($('#btnGoToPedido').length){
 
 var isMobile;
 function detectWindowSize() {
-	if ($(window).width() > 770) {
+	if ($(window).width() > 960) {
 		isMobile = false;
 	} else {
 		isMobile = true;
 	}
 }
 detectWindowSize();
+
+function openMenu() {
+	$('#menu-icon').click(function() {
+		$('.menu-primary-container').slideToggle();
+	});
+}
+openMenu();
 
 function searchModal() {
 	$('#openSearch').click(function() {
@@ -33,15 +40,38 @@ function searchModal() {
 }
 searchModal();
 
-function fixDiv() {
-	var $fixedDivs = $('.scrollFixed');
-	if ($(window).scrollTop() > 400) {
-		$fixedDivs.addClass('scrollFixedOn');
+function scrollStop() {
+
+	var stopPoint = $('#passeios-turisticos-gallery').offset().top -154;
+	var scrollPosition = $(document).scrollTop();
+	var inverseScroll = stopPoint - scrollPosition + 92;
+
+	if ($(window).scrollTop() > stopPoint) {
+		$('#scrollStop').css({'position':'absolute', 'top':inverseScroll});
 	}
 	else {
-		$fixedDivs.removeClass('scrollFixedOn');
+		$('#scrollStop').css({'position':'initial'});
 	}
 }
+
+function fixDiv() {
+	var fixedDivs = $('.scrollFixed');
+	if ($(window).scrollTop() > 400) {
+		fixedDivs.addClass('scrollFixedOn');
+		$('.passeios-turisticos-content').addClass('fixFixed');
+	}
+	else {
+		fixedDivs.removeClass('scrollFixedOn');
+		$('.passeios-turisticos-content').removeClass('fixFixed');
+	}
+	scrollStop();
+}
+
+$("#scroll-bottom").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#afterScroll").offset().top-20
+    }, 1200);
+});
 
 $(window).resize(function() {
 	detectWindowSize();
@@ -49,6 +79,6 @@ $(window).resize(function() {
 
 $(window).scroll(function() {
 	if (!isMobile) {
-		//fixDiv();
+		fixDiv();
 	}
 });

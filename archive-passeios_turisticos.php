@@ -1,11 +1,3 @@
-<?php
-/**
- * Template Name: Passeios Turísticos
- * The template for the archive page.
- *
- */
-?>
-
 <?php 
 	get_header();
 
@@ -22,46 +14,50 @@
 					</section>
 				</article>
 			</div>
-			<?php
-			if ( have_posts() ) : ?>
 
-				<?php
-				$i = 0;
-				/* Start the Loop */
-				while ( have_posts() ) : the_post(); 
-					if ($i == 0) { ?>
-						<div class="row">
-				<?php } ?>
+			<div class="container-large">
+				<?php if ( have_posts() ) : 
+					$i = 0;
+					/* Start the Loop */
+					while ( have_posts() ) : the_post(); 
+						if ($i == 0) { ?>
+							<div class="row">
+					<?php } ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<a href="<?php the_permalink(); ?>">
-							<div class="passeios-turisticos-container passeios-turisticos-container-<?php echo $i+1 ?>" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">							
-								<header class="entry-header">
-									<div class="passeios-turisticos-text">
-										<h2><?php the_title(); ?></h2>
-										<h3><?php the_field('description'); ?></h3>
-									</div>
-									<div class="passeios-turisticos-button">Consultar</div>
-								</header><!-- .entry-header -->
-							</div>
-						</a>			
-					</article><!-- #post-## -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<a href="<?php the_permalink(); ?>">
+								<div class="passeios-turisticos-container passeios-turisticos-container-<?php echo $i+1 ?>" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">							
+									<header class="entry-header">
+										<div class="passeios-turisticos-text">
+											<h2><?php the_title(); ?></h2>
+											<h3><?php the_field('description'); ?></h3>
+										</div>
+										<div class="passeios-turisticos-button">Consultar</div>
+									</header><!-- .entry-header -->
+								</div>
+							</a>			
+						</article><!-- #post-## -->
 
-				<?php if ($i == 2) { ?>
-					</div>
-				<?php
-					$i = -1;
-				}	
-				$i++;
-				endwhile;
+					<?php if ($i == 2) { ?>
+						</div>
+					<?php
+						$i = -1;
+					}	
+					$i++;
+					endwhile;
 
-				the_posts_navigation();
+					if(function_exists('wp_paginate')):
+					    wp_paginate();  
+					else :
+						the_posts_navigation();
+					endif;
 
-			else :
+				else :
 
-				get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'template-parts/content', 'none' );
 
-			endif; ?>
+				endif; ?>
+			</div>
 
 		</div>
 	</div>

@@ -144,6 +144,14 @@ function co_country_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'co_country_theme_scripts' );
 
 /**
+ * Fix jQuery Gravity Forms
+ */
+add_filter("gform_init_scripts_footer", "init_scripts");
+	function init_scripts() {
+	return true;
+}
+
+/**
  * Enqueue google fonts.
  */
 function wpb_add_google_fonts() {
@@ -298,7 +306,6 @@ add_action( 'init', 'suporte', 0 );
 
 }
 
-
 /**
  * Search to Passeios Turísticos
  */
@@ -340,3 +347,17 @@ function tax_search_groupby($groupby) {
 	return $groupby;
 }
 add_filter('posts_groupby', 'tax_search_groupby');
+
+
+/**
+ * Fix excerpt
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 16;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

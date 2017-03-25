@@ -15,18 +15,7 @@
 			}
 		}
 	}
-	.passeios-turisticos-single {
-		.scrollFixedOn {
-			position: fixed !important;
-			top: 10px;
-			background-color: #FFF;
-			.container {
-				position: relative;
-			}
-			&.passeios-turisticos-sidebar {
-				right: 0;
-			}
-		}
+	.passeios-turisticos-single {		
 		.line-fix-container {
 			display: none;
 		}		
@@ -76,9 +65,11 @@
 				.passeios-turisticos-form-box {
 					height: 92px;
 					overflow: hidden;
-					border-top: 1px solid #999;
-					border-left: 1px solid #999;
-					border-right: 1px solid #999;
+					border: 1px solid #999;
+					border-bottom: 0; 
+					background-color: #FFF;
+					position: relative;
+					z-index: 2;
 					.passeios-turisticos-form-img {
 						float: left;
 						img {
@@ -137,7 +128,11 @@
 							font-weight: 400;
 							font-size: 16px;
 							padding: 15px 30px;
-							margin-top: 20px;    
+							margin-top: 20px;
+							@include transition(background-color .2s);
+							&:hover {
+								background-color: $color__site-main;
+							}
 						}
 					}
 				}				
@@ -147,6 +142,9 @@
 			margin: 20px 0;
 			padding-right: 20px;
 			color: #999;
+			&.fixFixed {
+				margin-top: 112px; 
+			}
 			h3, h4 {
 				color: $color__site-main; 
 			}
@@ -249,11 +247,7 @@
 					bottom: 0;
 					background-color: rgba(0,0,0,.5);
 					padding: 15px;
-					-webkit-transition: all .3s; 
-					-moz-transition: all .3s; 
-					-ms-transition: all .3s; 
-					-o-transition: all .3s; 
-					transition: all .3s; 					
+					@include transition(all .3s);					
 					.passeios-turisticos-text {
 						width: 65%;						
 						padding-right: 10px;
@@ -279,11 +273,7 @@
 						font-weight: 400;
 						padding-top: 8px;
 						margin-top: 10px;
-						-webkit-transition: background-color .3s; 
-						-moz-transition: background-color .3s; 
-						-ms-transition: background-color .3s; 
-						-o-transition: background-color .3s; 
-						transition: background-color .3s; 						
+						@include transition(background-color .3s);						
 					}
 				}
 			}
@@ -323,6 +313,27 @@
 
 @media (min-width: $size__breakpoint-large) {
 	.passeios-turisticos-single {
+		.scrollFixedOn {
+			position: fixed !important;
+			background-color: #FFF;
+			top: 0;
+			.admin-bar & {
+				top: 32px;
+			}
+			&.passeios-turisticos-sidebar {
+				margin-left: 600px;
+			}
+			&.line-fix-container {
+				top: 1px;
+				z-index: 800;  
+				.admin-bar & {
+					top: 33px;
+				}
+				.line-fix {
+					width: 9999px;
+				}
+			}
+		}
 		.passeios-turisticos-title {
 			h1 {
 				font-size: 44px; 
@@ -330,7 +341,7 @@
 			h2 {
 				font-size: 30px; 
 			}
-		}
+		}		
 		.line-fix-container {
 			position: relative;
 			display: block;
@@ -340,13 +351,16 @@
 				width: 100%;
 				display: block;
 				border-bottom: 1px solid #999;
+				z-index: 10;
 			}
 		}
 		.passeios-turisticos-main {
-			width: 75%;
+			width: 615px;
 			.passeios-turisticos-topBar {
+				width: 600px;
 				height: 92px;
 				overflow: hidden;
+				z-index: 700;
 				.topBarItem {
 					border-bottom: 0;
 					&:first-child {
@@ -356,7 +370,7 @@
 			}
 		}
 		.passeios-turisticos-sidebar {
-			width: 25%;
+			width: 292px;
 			.passeios-turisticos-form {
 				.passeios-turisticos-form-box {
 					border-top: 0px;
@@ -392,6 +406,29 @@
 }
 
 @media (min-width: $size__breakpoint-xlarge) {
+	.passeios-turisticos-single {
+		.scrollFixedOn {
+			&.passeios-turisticos-sidebar {
+				width: 292px;
+				margin-left: 877px;
+			}
+		}
+		.passeios-turisticos-main {
+			width: 75%;
+			.scrollFixedOn {
+				&.passeios-turisticos-topBar {
+					width: 877px;
+				}
+			}
+			.passeios-turisticos-topBar {
+				width: initial; 
+			}
+		}
+		.passeios-turisticos-sidebar {
+			width: 25%;
+			margin-left: 0;
+		}
+	}
 	.passeios-turisticos-archive {
 		article.passeios_turisticos {
 			margin-bottom: 30px;

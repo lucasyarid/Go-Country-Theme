@@ -21,12 +21,8 @@ get_header(); ?>
 			</div>
 
 			<div class="blog-container container">
-				<div class="blog-sidebar">
-					<?php get_sidebar(); ?>
-				</div>
-				<?php
-				if ( have_posts() ) : ?>
-
+				<div class="blog-posts">
+					<?php while ( have_posts() ) : the_post(); ?>	
 						<article id="post-single-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<div class="post-single-container">
 								<div class="post-date">
@@ -41,14 +37,12 @@ get_header(); ?>
 								</div>
 							</div>	
 						</article><!-- #post-## -->
+					<?php endwhile; ?>
+				</div>
 
-					<?php
-
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif; ?>
+				<div class="blog-sidebar">
+					<?php get_sidebar(); ?>
+				</div>
 			</div>
 			
 			</main><!-- #main -->

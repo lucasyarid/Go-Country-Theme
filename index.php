@@ -25,10 +25,7 @@ get_header(); ?>
 				</article>
 			</div>
 
-			<div class="blog-container container">
-				<div class="blog-sidebar">
-					<?php get_sidebar(); ?>
-				</div>
+			<div class="blog-container container">				
 				<div class="blog-posts">
 					<?php
 					if ( have_posts() ) : ?>
@@ -84,6 +81,9 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', 'none' );
 
 					endif; ?>
+				</div>
+				<div class="blog-sidebar">
+					<?php get_sidebar(); ?>
 				</div>
 			</div>
 			

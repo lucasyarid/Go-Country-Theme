@@ -1592,12 +1592,20 @@ a:hover, a:active {
   }
 }
 @media (min-width: 960px) {
+  .single .blog .blog-container .blog-posts article.post {
+    width: 100%;
+  }
+
   .blog .blog-container .blog-sidebar {
     width: 25%;
     padding-right: 20px;
   }
   .blog .blog-container .blog-posts {
     width: 75%;
+    float: right;
+  }
+  article.post .blog .blog-container .blog-posts .single-post {
+    width: 100%;
   }
   .blog .blog-container .blog-posts article.post {
     width: 50%;

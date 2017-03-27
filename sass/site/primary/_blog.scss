@@ -140,14 +140,27 @@
 }
 
 @media (min-width: $size__breakpoint-large) {
+	.single .blog {
+		.blog-container {
+			.blog-posts {
+				article.post {
+					width: 100%;
+				}
+			}
+		}
+	}
 	.blog {
 		.blog-container {
 			.blog-sidebar {
 				width: 25%;
-				padding-right: 20px; 
+				padding-right: 20px;				
 			}
 			.blog-posts {
 				width: 75%;
+				float: right;
+				article.post & .single-post {
+					width: 100%;
+				}
 				article.post {
 					width: 50%;
 					float: left;

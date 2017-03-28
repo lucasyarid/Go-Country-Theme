@@ -23,6 +23,11 @@ get_header(); ?>
 						<h2>Novidades do Reino Unido</h2>			
 					</section>
 				</article>
+				<div class="container">
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+					} ?>
+				</div>
 			</div>
 
 			<div class="blog-container container">				

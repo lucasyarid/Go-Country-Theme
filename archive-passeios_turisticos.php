@@ -13,6 +13,11 @@
 						<h1>Passeios Turísticos</h1>		
 					</section>
 				</article>
+				<div class="container">
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+					} ?>
+				</div>				
 			</div>
 
 			<div class="container-large">

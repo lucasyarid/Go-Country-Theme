@@ -949,10 +949,21 @@ a:hover, a:active {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
   }
   .home .header-cover {
-    padding-top: 18%;
-    height: 100vh;
+    padding-top: 30px;
+  }
+
+  .breadcrumbs {
+    color: #FFF;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: .05em;
+  }
+  .breadcrumbs a {
+    color: #FFF;
   }
 }
 @media (min-width: 960px) {
@@ -990,6 +1001,11 @@ a:hover, a:active {
 
   .site-header {
     height: 116px;
+  }
+
+  .home .header-cover {
+    padding-top: 18%;
+    height: 100vh;
   }
 }
 .site-footer {
@@ -1248,10 +1264,107 @@ a:hover, a:active {
   }
   .home .header-cover .banner-content .banner-form, .home .header-cover .banner-content .banner-content-title {
     width: 100%;
-    float: left;
+  }
+  .home .header-cover .banner-content .banner-content-title {
+    font-size: 24px;
+    color: #FFF;
+    text-align: center;
+    padding-top: 60px;
+    float: right;
+    margin-bottom: 30px;
+  }
+  .home .header-cover .banner-content .banner-content-title b {
+    text-transform: uppercase;
+  }
+  .home .header-cover .banner-content .banner-form-button {
+    padding-top: 12px;
+    background-color: #c52244;
+    border: 0;
+    clear: both;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    width: 210px;
+    height: 45px;
+    margin: 30px auto;
+    clear: both;
   }
   .home .header-cover .banner-content .banner-form {
+    float: left;
     display: none;
+    margin-bottom: 70px;
+  }
+  .home .header-cover .banner-content .banner-form .banner-form-container {
+    border: 1px solid #fff;
+    display: block;
+    max-width: 442px;
+    margin: 0 auto;
+  }
+  .home .header-cover .banner-content .banner-form h2 {
+    text-transform: uppercase;
+    color: #6888BB;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    background-color: #FFF;
+    font-size: 18px;
+  }
+  .home .header-cover .banner-content .banner-form .gform_wrapper {
+    padding: 25px 30px;
+  }
+  .home .header-cover .banner-content .banner-form .gform_wrapper .gf_left_half {
+    padding-right: 0;
+  }
+  .home .header-cover .banner-content .banner-form ul {
+    margin: 0;
+    padding: 0;
+  }
+  .home .header-cover .banner-content .banner-form ul li {
+    display: block;
+    width: 100%;
+  }
+  .home .header-cover .banner-content .banner-form ul li label:not(.gfield_label) {
+    display: none;
+  }
+  .home .header-cover .banner-content .banner-form ul li label, .home .header-cover .banner-content .banner-form ul li input, .home .header-cover .banner-content .banner-form ul li select {
+    width: 100%;
+  }
+  .home .header-cover .banner-content .banner-form ul li label {
+    color: #FFF;
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .home .header-cover .banner-content .banner-form ul li input {
+    background: transparent;
+    border-radius: initial;
+    margin-bottom: 10px;
+    color: #FFF;
+    padding-left: 10px;
+  }
+  .home .header-cover .banner-content .banner-form ul li select {
+    color: #415ea5;
+    height: 32px;
+    padding-left: 10px;
+  }
+  .home .header-cover .banner-content .banner-form .gform_button {
+    clear: both;
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: .1em;
+    text-align: center;
+    color: #FFF;
+    background-color: #c52244;
+    border-radius: 0;
+    border: none;
+  }
+  .home .header-cover .banner-content .banner-form .validation_error, .home .header-cover .banner-content .banner-form .instruction {
+    color: #FFF;
   }
   .home .header-cover .banner-content .box-slider ul {
     border: 1px solid #fff;
@@ -1260,20 +1373,11 @@ a:hover, a:active {
     margin: 0;
     width: 475px;
   }
-  .home .header-cover .banner-content .banner-content-title {
-    font-size: 24px;
-    color: #FFF;
-    text-align: center;
-    padding-top: 60px;
-  }
-  .home .header-cover .banner-content .banner-content-title b {
-    text-transform: uppercase;
-  }
   .home .header-cover .scroll-bottom {
     clear: both;
     display: block;
     position: absolute;
-    left: 50%;
+    left: 45%;
     bottom: 5%;
     cursor: pointer;
   }
@@ -1370,79 +1474,37 @@ a:hover, a:active {
   }
 }
 @media (min-width: 960px) {
+  .home .header-cover .scroll-bottom {
+    left: 48.5%;
+  }
   .home .header-cover .banner-content .banner-form, .home .header-cover .banner-content .banner-content-title {
     width: 50%;
-    float: left;
   }
   .home .header-cover .banner-content .banner-content-title {
     font-size: 44px;
     text-align: right;
   }
-  .home .header-cover .banner-content .banner-form {
-    border: 1px solid #fff;
-    width: 445px;
-    margin-right: 10%;
-    display: block;
-  }
-  .home .header-cover .banner-content .banner-form h2 {
-    text-transform: uppercase;
-    color: #6888BB;
-    margin: 0;
-    padding: 5px 0;
-    text-align: center;
-    width: 100%;
-    background-color: #FFF;
-    font-size: 28px;
-  }
-  .home .header-cover .banner-content .banner-form .gform_wrapper {
-    padding: 25px 30px;
-  }
-  .home .header-cover .banner-content .banner-form ul {
-    margin: 0;
-    padding: 0;
-  }
-  .home .header-cover .banner-content .banner-form ul li {
-    display: block;
-  }
-  .home .header-cover .banner-content .banner-form ul li label:not(.gfield_label) {
+  .home .header-cover .banner-content .banner-form-button {
     display: none;
   }
-  .home .header-cover .banner-content .banner-form ul li label {
-    color: #FFF;
-    font-size: 13px;
-    margin-bottom: 5px;
+  .home .header-cover .banner-content .banner-form {
     display: block;
+    margin-bottom: 0;
   }
-  .home .header-cover .banner-content .banner-form ul li input {
-    background: transparent;
-    border-radius: initial;
-    width: 100%;
-    margin-bottom: 10px;
-    color: #FFF;
-    padding-left: 10px;
+  .home .header-cover .banner-content .banner-form .banner-form-container {
+    margin: 0;
   }
-  .home .header-cover .banner-content .banner-form ul li select {
-    color: #415ea5;
-    width: 100%;
-    height: 32px;
-    padding-left: 10px;
+  .home .header-cover .banner-content .banner-form .gform_wrapper .gf_left_half, .home .header-cover .banner-content .banner-form .gform_wrapper .gf_right_half {
+    width: 50%;
   }
-  .home .header-cover .banner-content .banner-form .gform_button {
-    clear: both;
-    width: 100%;
-    height: 45px;
-    margin-top: 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: .1em;
-    text-align: center;
-    color: #FFF;
-    background-color: #c52244;
-    border-radius: 0;
-    border: none;
+  .home .header-cover .banner-content .banner-form .gform_wrapper .gf_left_half {
+    padding-right: 10px;
   }
-  .home .header-cover .banner-content .banner-form .validation_error, .home .header-cover .banner-content .banner-form .instruction {
-    color: #FFF;
+  .home .header-cover .banner-content .banner-form ul li {
+    width: inherit;
+  }
+  .home .header-cover .banner-content .banner-form h2 {
+    font-size: 28px;
   }
   .home .transfer-container .transfer-img {
     width: 69%;
@@ -2032,6 +2094,66 @@ a:hover, a:active {
   }
   .passeios-turisticos-archive article.passeios_turisticos .passeios-turisticos-container .entry-header {
     padding: 15px 30px;
+  }
+}
+/*--------------------------------------------------------------
+## Passeios Turisticos
+--------------------------------------------------------------*/
+@media (min-width: 320px) {
+  .suporte .header-cover {
+    margin-bottom: 60px;
+  }
+  .suporte .suporte-title h1 {
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 44px;
+    letter-spacing: .1em;
+  }
+  .suporte .single-container {
+    margin-bottom: 30px;
+  }
+  .suporte .single-container .post-single-container .post-text .post-title h2 {
+    color: #415ea5;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .suporte .single-container .post-single-container .post-text .entry-content {
+    margin: 0;
+  }
+  .suporte .single-sidebar {
+    background-color: #ededed;
+    padding: 20px;
+  }
+  .suporte .single-sidebar a {
+    font-size: 16px;
+    color: #444;
+  }
+  .suporte .single-sidebar a.current-page {
+    color: #415ea5;
+  }
+  .suporte .single-sidebar a:before {
+    content: "\2192";
+  }
+  .suporte .single-sidebar a:hover {
+    color: #c52244;
+  }
+  .suporte .single-posts, .suporte .single-sidebar {
+    width: 100%;
+    float: left;
+  }
+}
+@media (min-width: 960px) {
+  .suporte .single-posts {
+    width: 75%;
+    float: right;
+    padding-left: 30px;
+  }
+  .suporte .single-sidebar {
+    width: 25%;
   }
 }
 /*--------------------------------------------------------------

@@ -19,6 +19,11 @@ get_header(); ?>
 							<h1>Resultados da Busca</h1>		
 						</section>
 					</article>
+					<div class="container">
+						<?php if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+						} ?>
+					</div>
 				</div>
 				<?php
 				if ( have_posts() ) : ?>

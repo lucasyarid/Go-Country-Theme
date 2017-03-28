@@ -16,6 +16,11 @@
 					</h2>			
 				</section>
 			</article>
+			<div class="container">
+				<?php if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+				} ?>
+			</div>
 		</div>
 		
 		<?php while ( have_posts() ) : the_post(); ?>		

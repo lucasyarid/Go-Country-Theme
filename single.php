@@ -17,6 +17,9 @@ get_header(); ?>
 						<h1><?php the_title(); ?></h1>
 						<h2><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></h2>			
 					</section>
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+					} ?>
 				</article>
 			</div>
 

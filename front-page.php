@@ -16,15 +16,18 @@ get_header(); ?>
 			<div class="header-cover" style="background-image: url('/~gots/wp-content/uploads/index.jpg');">
 				<article class="banner-content container">
 					<section>
-						<div class="banner-form">
-							<h2>Solicite um Orçamento</h2>
-							<?php echo do_shortcode('[gravityform id=1 title=false]'); ?>
-						</div>
 						<div class="banner-content-title">
 							<b>go ESCÓCIA:</b> descubra
 							os <b>melhores</b> lugares
 							da <b>ESCÓCIA!</b>
-						</div>						
+						</div>
+						<div id="show-form-button" class="banner-form-button">Solicite um Orçamento</div>				
+						<div id="show-form" class="banner-form">
+							<div class="banner-form-container">
+								<h2>Solicite um Orçamento</h2>
+								<?php echo do_shortcode('[gravityform id=1 title=false]'); ?>
+							</div>
+						</div>
 					</section>
 				</article>
 				<div id="scroll-bottom" class="scroll-bottom">

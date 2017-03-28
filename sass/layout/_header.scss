@@ -28,9 +28,20 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+		position: relative;
 		.home & {
-			padding-top: 18%;
-			height:100vh;
+			padding-top: 30px;		
+		}
+	}
+
+	.breadcrumbs {
+		color: #FFF;
+		font-size: 13px;
+		position: absolute;
+		bottom: 0;
+		letter-spacing: .05em;
+		a {
+			color: #FFF; 
 		}
 	}
 }
@@ -69,5 +80,11 @@
 	}
 	.site-header {
 		height: 116px;
+	}
+	.header-cover {	
+		.home & {
+			padding-top: 18%;
+			height:100vh;
+		}
 	}
 }

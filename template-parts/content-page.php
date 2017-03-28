@@ -26,6 +26,11 @@
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>	
 				</section>
 			</article>
+			<div class="container">
+				<?php if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">','</p>');
+				} ?>
+			</div>
 		</div>
 
 		<div class="container">

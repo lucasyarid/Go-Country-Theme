@@ -1,0 +1,70 @@
+@media (min-width: $size__breakpoint-small) {
+	.suporte {
+		.header-cover {
+			margin-bottom: 60px;
+		}
+		.suporte-title {
+			h1 {
+				color: #FFF;
+				text-align: center; 
+				margin: 0;
+				text-transform: uppercase;
+				font-size: 44px;
+				letter-spacing: .1em;
+			}
+		}
+		.single-container {
+			margin-bottom: 30px;
+			.post-single-container {
+				.post-text {
+					.post-title {
+						h2 {
+							color: $color__site-main;
+							font-size: 30px;
+							margin-top: 0;
+							margin-bottom: 10px;
+							text-transform: uppercase;
+						}
+					}
+					.entry-content {
+						margin: 0;
+					}
+				}
+			}
+		}
+		.single-sidebar {
+			background-color: #ededed;
+			padding: 20px;
+			a {
+				font-size: 16px;
+				color: #444;
+				&.current-page {
+					color: $color__site-main; 
+				}
+				&:before {
+					content: "\2192";
+				}
+				&:hover {
+					color: $color__site-secondary; 
+				}
+			}
+		}
+		.single-posts, .single-sidebar {
+			width: 100%;
+			float: left; 
+		}
+	}
+}
+
+@media (min-width: $size__breakpoint-large) {
+	.suporte {
+		.single-posts {
+			width: 75%;
+			float: right;
+			padding-left: 30px;
+		}
+		.single-sidebar {
+			width: 25%;
+		}
+	}
+}

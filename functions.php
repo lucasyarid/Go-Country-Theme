@@ -348,7 +348,6 @@ function tax_search_groupby($groupby) {
 }
 add_filter('posts_groupby', 'tax_search_groupby');
 
-
 /**
  * Fix excerpt
  */
@@ -361,3 +360,26 @@ function wpdocs_excerpt_more( $more ) {
     return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+/**
+ * Posts per page Passeios Turísticos
+ */
+function is_post_type($type){
+    global $wp_query;
+    if($type == get_post_type($wp_query->post->ID)) return true;
+    return false;
+}
+function custom_posts_per_page($query) {
+    if (is_home()) {
+        $query->set('posts_per_page', 6);
+    }
+    if (is_search()) {
+        $query->set('posts_per_page', -1);
+    }
+    if (is_archive()) {
+        $query->set('posts_per_page', -1);
+    } //endif
+} //function
+
+//this adds the function above to the 'pre_get_posts' action     
+add_action('pre_get_posts', 'custom_posts_per_page');

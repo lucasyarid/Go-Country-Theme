@@ -67,6 +67,12 @@ function fixDiv() {
 	scrollStop();
 }
 
+$('#show-form-button').click(function() {
+	$(this).slideUp( 100, function() {
+		$('#show-form').slideDown('slow');
+  	});    
+});
+
 $("#scroll-bottom").click(function() {
     $('html, body').animate({
         scrollTop: $("#afterScroll").offset().top-20
